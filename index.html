@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NAV04_V2BU2_V01.10-EST · 9º ANO · IA e Realidades Sociais · 2026</title>
+<title>NAV04_V2BU2_V01.11-EST · 9º ANO · IA e Realidades Sociais · 2026</title>
 <!--
   v32 · CORREÇÃO LATERAIS QPA + PÁGINA 0 (sobre v31):
   Origem: CLD-006 do CM-TEC-REVISA-NAV_001 · mesma solução aplicada no NAV.05 v04.22
@@ -900,6 +900,17 @@ body.feedback-erro {
 .vea-resp.no { background: #FBE9E9; }
 .vea-lock { display: block; font-size: 12px; color: var(--cinza-medio); margin-top: 4px; }
 .vea-voltar { width: 100%; margin-top: 14px; background: linear-gradient(135deg, var(--verde-vida), #2E6029); color: #fff; border: none; padding: 14px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; }
+
+/* ===== SELO DE VERSÃO (todas as telas) ===== */
+.selo-versao-fix {
+  position: fixed; bottom: 8px; right: 8px; z-index: 9998;
+  background: rgba(74, 42, 122, 0.88); color: #fff;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+  padding: 4px 9px; border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif; pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25); user-select: none;
+}
+@media print { .selo-versao-fix { display: none !important; } }
 
 .tela-resultado { display: none; }
 
@@ -3167,6 +3178,7 @@ body.modo-bv .qpa-deco-lateral { display: none !important; }
 </style>
 </head>
 <body class="modo-bv">
+<div id="seloVersaoFix" class="selo-versao-fix" data-versao-suffix="EST">V01.11-EST</div>
 
 <!-- Frase temática fixa · topo esquerdo · todas as páginas -->
 <div class="frase-tematica">
@@ -3408,7 +3420,7 @@ body.modo-bv .qpa-deco-lateral { display: none !important; }
     <span class="bv-emoji-flut e4">📱</span>
   </div>
   <div class="bv-titulo">🕊️ Revisão preparatória para 2ª AAIM · 2º Bim.</div>
-  <div class="bv-subtitulo" data-versao-suffix="EST">9º ano · Tecnologia · NAV04_V2BU2_V01.10-EST · 2026</div>
+  <div class="bv-subtitulo" data-versao-suffix="EST">9º ano · Tecnologia · NAV04_V2BU2_V01.11-EST · 2026</div>
   <div class="bv-faixa-tema">IA para compreender e transformar realidades sociais</div>
 
   <div class="bv-secao bv-secao-objetivo">
@@ -3462,7 +3474,7 @@ body.modo-bv .qpa-deco-lateral { display: none !important; }
 
 <div class="tela-login" id="telaLogin" style="display:none">
   <div class="logo-titulo">REVISÃO 2B · 9º ANO</div>
-  <div class="subtitulo" data-versao-suffix="EST">NAV04_V2BU2_V01.10-EST · Tecnologia · Cultura Digital</div>
+  <div class="subtitulo" data-versao-suffix="EST">NAV04_V2BU2_V01.11-EST · Tecnologia · Cultura Digital</div>
   <div class="tema-cabec">IA para compreender e transformar realidades sociais</div>
   
   <form class="form-login" id="formLogin" onsubmit="iniciarQuiz(event)">
@@ -3827,7 +3839,7 @@ body.modo-bv .qpa-deco-lateral { display: none !important; }
     <input type="hidden" id="area" name="area">
     <input type="hidden" id="genero">
     <button type="button" class="botao-principal" onclick="iniciarQuiz({preventDefault:function(){}})">Começar a revisão 🚀</button>
-    <div class="aviso-beta" data-versao-suffix="EST">⚙️ Versão NAV04_V2BU2_V01.10-EST · 22 questões · IA e Realidades Sociais · Cultura Digital</div>
+    <div class="aviso-beta" data-versao-suffix="EST">⚙️ Versão NAV04_V2BU2_V01.11-EST · 22 questões · IA e Realidades Sociais · Cultura Digital</div>
   </form>
   
   <div class="info-prof">
@@ -7347,7 +7359,7 @@ function acessarModoProf() {
     trocarPerfilVersao('PROF');
     revelarCena();
     let html = `<div class="modo-prof">
-      <h2>📋 Modo Professor · NAV04_V2BU2_V01.10-PROF · 9º ano · 2B · Unidade 2 · IA e Realidades Sociais</h2>
+      <h2>📋 Modo Professor · NAV04_V2BU2_V01.11-PROF · 9º ano · 2B · Unidade 2 · IA e Realidades Sociais</h2>
       <p><strong>Gabarito (B-B-A-A cíclico · GAB.MOD.04):</strong></p>
       <table class="gabarito-tabela">
         <tr><th>QPA</th><th>Gab</th><th>QPA</th><th>Gab</th><th>QPA</th><th>Gab</th><th>QPA</th><th>Gab</th></tr>`;
@@ -7361,7 +7373,7 @@ function acessarModoProf() {
       html += '</tr>';
     }
     html += `</table>
-      <p style="margin-top:20px"><strong>📌 NAV04_V2BU2_V01.10-PROF · ${questoes.length}/22 questões · Aulas A.27→A.30 e A.33→A.36</strong></p>
+      <p style="margin-top:20px"><strong>📌 NAV04_V2BU2_V01.11-PROF · ${questoes.length}/22 questões · Aulas A.27→A.30 e A.33→A.36</strong></p>
       <ul style="margin:14px 0 14px 24px;line-height:1.8">
         <li><strong>Personagens F (com par M):</strong> Bianca/Bruno · Yasmin/Kauê · Camila/Rafael · Sofia/Murilo · Clara/Otávio · Letícia/Davi · Helena/Thiago · Larissa/Igor · Beatriz/Lucas · Aurora/Henrique</li>
         <li><strong>Colegas auxiliares:</strong> Ariadne/Adriano · Vinícius · Mariana/Marcelo · Pâmela · Jéssica</li>
